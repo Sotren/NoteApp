@@ -12,7 +12,7 @@
         <!--Notes-->
         <scene sceneID="vVC-pl-yPE">
             <objects>
-                <tableViewController title="Notes" id="lKT-Bt-c9N" sceneMemberID="viewController">
+                <tableViewController title="Notes" id="lKT-Bt-c9N" customClass="NotesTableViewController" customModule="NoteAppUI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q8Y-RI-UMg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,12 +36,12 @@
                     <navigationItem key="navigationItem" title="Notes" id="yIW-3t-lhh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GqO-Y1-riG">
                             <connections>
-                                <segue destination="KdX-mU-Pgi" kind="show" id="7eL-KQ-iFp"/>
+                                <action selector="addNoteButtonTapped:" destination="lKT-Bt-c9N" id="hsa-wW-mOW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="KdX-mU-Pgi" kind="show" id="XF1-np-ROq"/>
+                        <segue destination="KdX-mU-Pgi" kind="show" identifier="ShowEditScreenSegue" id="XF1-np-ROq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOK-xN-ffW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -51,7 +51,7 @@
         <!--Title-->
         <scene sceneID="5Lf-LJ-f8P">
             <objects>
-                <viewController id="KdX-mU-Pgi" sceneMemberID="viewController">
+                <viewController id="KdX-mU-Pgi" customClass="EditNoteViewController" customModule="NoteAppUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oSn-q8-KxR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,8 +75,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="gkv-Da-zTf">
-                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="Nlt-bS-HNO"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="Nlt-bS-HNO">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="KdX-mU-Pgi" id="W0M-U6-9N8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="up0-zV-fky" id="dPC-tj-bpx"/>
+                        <outlet property="doneButton" destination="Nlt-bS-HNO" id="FdP-C6-2cs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmw-cf-2aw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,9 +109,6 @@
             <point key="canvasLocation" x="-159.42028985507247" y="102.45535714285714"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="XF1-np-ROq"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
