@@ -12,7 +12,7 @@ import UIKit
 class NotesTableViewController: UITableViewController , EditNoteDelegate{
     
     //Button to add notes
-    @IBAction func addNoteButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction  private func addNoteButtonTapped(_ sender: UIBarButtonItem) {
         let note = ["title": "", "body": ""]
         notes.insert(note, at: 0)
         self.tableView.reloadData()
@@ -21,8 +21,8 @@ class NotesTableViewController: UITableViewController , EditNoteDelegate{
     }
     //An Array of dictionaris whitch string key and string value
     // Keys="title","body"
-    var notes = [[String:String]]()
-    var selectIndex = -1
+    private var notes = [[String:String]]()
+    private var selectIndex = -1
     
     override func viewDidLoad() {
     
@@ -37,20 +37,19 @@ class NotesTableViewController: UITableViewController , EditNoteDelegate{
         return 1
     }
 //Return number of rows in each section
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         return self.notes.count
     }
 
     //Save notes use Ns userDefault
-    func saveNotes(){
+    private func saveNotes(){
         UserDefaults.standard.setValue(self.notes, forKey: "notes")
         UserDefaults.standard.synchronize()
     }
     //read notes
-    func readNotes() {
-        
-       if let newNotes =
+    private func readNotes() {
+        if let newNotes =
             UserDefaults.standard.array(forKey: "notes") as?
             [[String:String]]{
         
@@ -89,8 +88,7 @@ class NotesTableViewController: UITableViewController , EditNoteDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let destinationVc = segue.destination as?
-            EditNoteViewController
+        let destinationVc = segue.destination as? EditNoteViewController
         destinationVc?.title = self.notes[selectIndex]["title"]
         destinationVc?.noteBody = self.notes[selectIndex]["body"]
         destinationVc?.editNoteDelegate = self

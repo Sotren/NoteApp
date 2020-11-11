@@ -41,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D18F5CB255B7DC9005B6AC6 /* SuppFile */ = {
+			isa = PBXGroup;
+			children = (
+				4D7BF14E25304DF100524F93 /* AppDelegate.swift */,
+				4D7BF15025304DF100524F93 /* SceneDelegate.swift */,
+				4D7BF15225304DF100524F93 /* ViewController.swift */,
+			);
+			name = SuppFile;
+			sourceTree = "<group>";
+		};
 		4D7BF14225304DF100524F93 = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +70,11 @@
 		4D7BF14D25304DF100524F93 /* NoteAppUI */ = {
 			isa = PBXGroup;
 			children = (
-				4D7BF14E25304DF100524F93 /* AppDelegate.swift */,
-				4D7BF15025304DF100524F93 /* SceneDelegate.swift */,
 				4D76AF9E253988B700B40883 /* NotesTableViewController.swift */,
-				4D7BF15225304DF100524F93 /* ViewController.swift */,
-				4D7BF15425304DF100524F93 /* Main.storyboard */,
 				4D76AFA12539914100B40883 /* EditNoteViewController.swift */,
+				4D7BF15425304DF100524F93 /* Main.storyboard */,
 				4D7BF15725304DF400524F93 /* Assets.xcassets */,
+				4D18F5CB255B7DC9005B6AC6 /* SuppFile */,
 				4D7BF15925304DF400524F93 /* LaunchScreen.storyboard */,
 				4D7BF15C25304DF400524F93 /* Info.plist */,
 			);

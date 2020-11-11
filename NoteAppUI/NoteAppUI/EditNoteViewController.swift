@@ -7,14 +7,14 @@
 //
 // class for TextEditing
 import UIKit
-//crate delegate to be able save notes
+//crate delegate
 protocol EditNoteDelegate {
     func updateNote(updateTitle: String , updateBody: String)}
 
 class EditNoteViewController: UIViewController,UITextViewDelegate {
 
     //dismiss the keyboar
-    @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction private func doneButtonTapped(_ sender: UIBarButtonItem) {
         self.bodyTextView.resignFirstResponder()
         self.doneButton.isEnabled = false
     
@@ -24,7 +24,7 @@ class EditNoteViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var bodyTextView: UITextView!
     //define delegate
     //will get updated titile and body
-    var editNoteDelegate : EditNoteDelegate?
+   var editNoteDelegate : EditNoteDelegate?
     var noteBody: String!
     
     //do any additional setup  after loading the view.
@@ -36,7 +36,7 @@ class EditNoteViewController: UIViewController,UITextViewDelegate {
     }
     
     //grap updated titile and body 
-    override func viewWillDisappear(_ animated: Bool) {
+    override  func viewWillDisappear(_ animated: Bool) {
         
         if self.editNoteDelegate != nil {
             self.editNoteDelegate?.updateNote(updateTitle: self.getNotesTitile(), updateBody: self.bodyTextView.text)
@@ -49,7 +49,7 @@ class EditNoteViewController: UIViewController,UITextViewDelegate {
     }
 //grap titile
 // don't take empty lines
-    func getNotesTitile() -> String{
+  private  func getNotesTitile() -> String{
         let components = self.bodyTextView.text.components(separatedBy: "\n")
         for components in components{
             if components.trimmingCharacters(in: CharacterSet.whitespaces).count > 0{
