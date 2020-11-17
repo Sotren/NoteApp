@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D18F5CE255FB4DB005B6AC6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18F5CD255FB4DB005B6AC6 /* Note.swift */; };
+		4D18F5D1255FB595005B6AC6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18F5D0255FB595005B6AC6 /* DataManager.swift */; };
+		4D18F5D5255FBA2B005B6AC6 /* NotesDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18F5D4255FBA2B005B6AC6 /* NotesDictionary.swift */; };
+		4D18F5DC2563A8C2005B6AC6 /* MenuUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18F5DB2563A8C2005B6AC6 /* MenuUi.swift */; };
 		4D76AF9F253988B700B40883 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76AF9E253988B700B40883 /* NotesTableViewController.swift */; };
 		4D76AFA22539914100B40883 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76AFA12539914100B40883 /* EditNoteViewController.swift */; };
 		4D7BF14F25304DF100524F93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7BF14E25304DF100524F93 /* AppDelegate.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D18F5CD255FB4DB005B6AC6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		4D18F5D0255FB595005B6AC6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4D18F5D4255FBA2B005B6AC6 /* NotesDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDictionary.swift; sourceTree = "<group>"; };
+		4D18F5DB2563A8C2005B6AC6 /* MenuUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUi.swift; sourceTree = "<group>"; };
 		4D76AF9E253988B700B40883 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		4D76AFA12539914100B40883 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 		4D7BF14B25304DF100524F93 /* NoteAppUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteAppUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,8 @@
 		4D18F5CB255B7DC9005B6AC6 /* SuppFile */ = {
 			isa = PBXGroup;
 			children = (
+				4D7BF15725304DF400524F93 /* Assets.xcassets */,
+				4D7BF15925304DF400524F93 /* LaunchScreen.storyboard */,
 				4D7BF14E25304DF100524F93 /* AppDelegate.swift */,
 				4D7BF15025304DF100524F93 /* SceneDelegate.swift */,
 				4D7BF15225304DF100524F93 /* ViewController.swift */,
@@ -70,12 +80,14 @@
 		4D7BF14D25304DF100524F93 /* NoteAppUI */ = {
 			isa = PBXGroup;
 			children = (
+				4D18F5D0255FB595005B6AC6 /* DataManager.swift */,
+				4D18F5D4255FBA2B005B6AC6 /* NotesDictionary.swift */,
+				4D18F5CD255FB4DB005B6AC6 /* Note.swift */,
 				4D76AF9E253988B700B40883 /* NotesTableViewController.swift */,
+				4D18F5DB2563A8C2005B6AC6 /* MenuUi.swift */,
 				4D76AFA12539914100B40883 /* EditNoteViewController.swift */,
 				4D7BF15425304DF100524F93 /* Main.storyboard */,
-				4D7BF15725304DF400524F93 /* Assets.xcassets */,
 				4D18F5CB255B7DC9005B6AC6 /* SuppFile */,
-				4D7BF15925304DF400524F93 /* LaunchScreen.storyboard */,
 				4D7BF15C25304DF400524F93 /* Info.plist */,
 			);
 			path = NoteAppUI;
@@ -154,9 +166,13 @@
 			files = (
 				4D7BF15325304DF100524F93 /* ViewController.swift in Sources */,
 				4D76AF9F253988B700B40883 /* NotesTableViewController.swift in Sources */,
+				4D18F5D1255FB595005B6AC6 /* DataManager.swift in Sources */,
 				4D7BF14F25304DF100524F93 /* AppDelegate.swift in Sources */,
 				4D76AFA22539914100B40883 /* EditNoteViewController.swift in Sources */,
+				4D18F5DC2563A8C2005B6AC6 /* MenuUi.swift in Sources */,
 				4D7BF15125304DF100524F93 /* SceneDelegate.swift in Sources */,
+				4D18F5CE255FB4DB005B6AC6 /* Note.swift in Sources */,
+				4D18F5D5255FBA2B005B6AC6 /* NotesDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
