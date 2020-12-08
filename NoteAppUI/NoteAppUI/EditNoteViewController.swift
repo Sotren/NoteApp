@@ -9,6 +9,7 @@
 import UIKit
 //crate delegate
 protocol EditNoteDelegate {
+    
     func updateNote(updateTitle: String , updateBody: String)}
 
 class EditNoteViewController: UIViewController,UITextViewDelegate {
@@ -49,7 +50,7 @@ class EditNoteViewController: UIViewController,UITextViewDelegate {
     }
 //grap titile
 // don't take empty lines
-  private  func getNotesTitile() -> String{
+    func getNotesTitile() -> String{
         let components = self.bodyTextView.text.components(separatedBy: "\n")
         for components in components{
             if components.trimmingCharacters(in: CharacterSet.whitespaces).count > 0{

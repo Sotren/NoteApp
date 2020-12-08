@@ -10,15 +10,9 @@ import Foundation
 class NotesDictionary{
     //An Array of dictionaris whitch string key and string value
     // Keys="title","body"
-     var notes = [[String:String]]()
+    var notes = [[String:String]]()
     
-    struct Category {
-        var work = " "
-        var home = " "
-       var  helfAndSport = " "
-        var finance = " "
-         var othe = " "
-    }
+    
         
     }
 

@@ -7,32 +7,34 @@
 //
 //Class for UITableViewController
 import UIKit
+import SideMenu
 
-
-class NotesTableViewController: UITableViewController , EditNoteDelegate{
+class NotesTableViewController: UITableViewController, EditNoteDelegate{
    
     var data = DataManager()
+    var menu: SideMenuNavigationController?
+    var note = Note()
+    private var selectIndex = -1
     
     //Button to add notes
     @IBAction  private func addNoteButtonTapped(_ sender: UIBarButtonItem) {
-        let note = ["title": "", "body": ""]
+        let note = ["title":self.note.title, "body": self.note.body,"date": self.note.dateToString(currentDateTime: self.note.currentDateTime), ]
         data.notes.insert(note, at: 0)
         self.tableView.reloadData()
         self.selectIndex = 0
         performSegue(withIdentifier: "ShowEditScreenSegue", sender: nil)
     }
-    //An Array of dictionaris whitch string key and string value
-    // Keys="title","body"
- 
-    private var selectIndex = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         data.self.readNotes()
-       
+        menu  = SideMenuNavigationController(rootViewController: MenuViewController ())
+        menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: false)
     }
     
-    @IBOutlet var menu: UICommand!
+    @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
+        present(menu!,animated: true)}
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

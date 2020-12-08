@@ -34,9 +34,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="yIW-3t-lhh">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="EBb-GG-GPh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="ShQ-xc-xeT">
                             <connections>
-                                <action selector="didTapMenu:" destination="GYY-4M-Hxs" id="TZ9-22-vF5"/>
+                                <action selector="didTapMenu:" destination="lKT-Bt-c9N" id="Iw0-DT-lpI"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GqO-Y1-riG">
@@ -46,12 +46,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menu" destination="GYY-4M-Hxs" id="NA6-4x-o1E"/>
                         <segue destination="KdX-mU-Pgi" kind="show" identifier="ShowEditScreenSegue" id="XF1-np-ROq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOK-xN-ffW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <command title="Item" id="GYY-4M-Hxs"/>
             </objects>
             <point key="canvasLocation" x="750.72463768115949" y="102.45535714285714"/>
         </scene>

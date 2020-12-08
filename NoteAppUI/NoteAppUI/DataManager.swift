@@ -17,8 +17,7 @@ class DataManager: NotesDictionary {
     }
     //read notes
      func readNotes() {
-        if let newNotes =
-            UserDefaults.standard.array(forKey: "notes") as? [[String:String]]{
+        if let newNotes = UserDefaults.standard.array(forKey: "notes") as? [[String:String]]{
         self.notes = newNotes
        }
 
